@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='GB2312'?>
+<patternlist>
+		<pattern name='电子邮件地址' value='/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/'/>
+		<pattern name='邮政编码' value='/[0-9]{6}/'/>
+		<pattern name='电话号码' value='/(^([0][1-9]{2,3}[-])?\d{3,8}(-\d{1,6})?$)|(^\([0][1-9]{2,3}\)\d{3,8}(\(\d{1,6}\))?$)|(^\d{3,8}$)/'/>
+		<pattern name='英文字母' value='/^[A-Za-z]+$/'/>
+		<pattern name='大写英文字母' value='/^[A-Z]+$/'/>
+		<pattern name='小写英文字母' value='/^[a-z]+$/'/>
+		<pattern name='整数' value='/^(\+|-)?\d+$/'/>
+		<pattern name='正整数' value='/^[0-9]+$/'/>
+		<pattern name='数字' value='/^\d+$/'/>
+		<pattern name='实数' value='/^(\+|-)?\d+($|\.\d+$)/'/>
+		<pattern name='正实数' value='/^(\+)?\d+($|\.\d+$)/'/>
+		<pattern name='非零实数' value='/^(\+|-)?\d+($|\.\d+$)/'/>
+		<pattern name='汉字' value='/^[\u4e00-\u9fa5]+$/'/>
+		<pattern name='汉字、字母、数字' value='^[0-9a-zA-Z\u4e00-\u9fa5]+$'/>
+		<pattern name='手机号码' value='/(^[1][0-9]{10}$)|(^0[1][0-9]{10}$)/'/>
+		<pattern name='非空' value='/[^\\0]+/'/>
+</patternlist>

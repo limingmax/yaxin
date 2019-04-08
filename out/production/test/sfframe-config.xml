@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="gb2312"?>
+<SfframeConfig>
+    <ConfigKind name="SystemParam">
+        <ConfigItem name="AUTH_DEAL_STATIONTYPE_KIND"
+                    remarks="审核处理岗位类型分类">
+        </ConfigItem>
+        <ConfigItem name="TASK_DEAL_STATIONTYPE_KIND"
+                    remarks="工单处理岗位类型分类">
+        </ConfigItem>
+        <ConfigItem name="SF_DISPATCH_ORDER_FAIL_MAX_TIMES"
+                    remarks="sf定单调度失败最大处理次数">
+            5
+        </ConfigItem>
+        <ConfigItem name="SYS_DEFAULT_ORDER_ALARM_LIMIT"
+                    remarks="系统默认的定单告警时限">
+            172800
+        </ConfigItem>
+        <ConfigItem name="SYS_DEFAULT_ORDER_DELAY_LIMIT"
+                    remarks="系统默认的定单超时时限">
+            259200
+        </ConfigItem>
+        <ConfigItem name="SYS_DEFAULT_TASK_ALARM_LIMIT"
+                    remarks="系统默认的工单告警时限">
+            43200
+        </ConfigItem>
+        <ConfigItem name="SYS_DEFAULT_TASK_DELAY_LIMIT"
+                    remarks="系统默认的工单超时时限">
+            86400
+        </ConfigItem>
+        <ConfigItem name="SYS_DEFAULT_TASKPKG_ALARM_LIMIT"
+                    remarks="系统默认的环节包告警时限">
+            86400
+        </ConfigItem>
+        <ConfigItem name="SYS_DEFAULT_TASKPKG_DELAY_LIMIT"
+                    remarks="系统默认的环节包超时时限">
+            172800
+        </ConfigItem>
+        <ConfigItem name="SYS_DEFAULT_WORK_BEGIN_TIME"
+                    remarks="系统默认的工作日起始时间">
+            08:00:00
+        </ConfigItem>
+        <ConfigItem name="SYS_DEFAULT_WORK_END_TIME"
+                    remarks="系统默认的工作日终止时间">
+            18:00:00
+        </ConfigItem>
+        <ConfigItem name="SYS_DEFAULT_ORDER_ALARM_MAX_TIME"
+                    remarks="系统默认的定单告警最大次数">
+            5
+        </ConfigItem>
+        <ConfigItem name="SYS_DEFAULT_TASK_ALARM_MAX_TIME"
+                    remarks="系统默认的工单告警最大次数">
+            5
+        </ConfigItem>
+        <ConfigItem name="SYS_DEFAULT_WARN_INTERVAL_TIME"
+                    remarks="系统默认的告警时间间隔(秒)">
+            3600
+        </ConfigItem>
+        <ConfigItem name="SYS_ORDER_CHANGE_REASON_FLAG"
+                    remarks="定单变更原因自动计算标志">
+        </ConfigItem>
+        <ConfigItem name="PKG_TIMELIMITE_VALIDATE_FLAG"
+                    remarks="打包时限生效标志">
+        </ConfigItem>
+        <ConfigItem name="TASK_REDOTIMES" remarks="打单重做次数">
+            3
+        </ConfigItem>
+        <ConfigItem name="NEW_BUSI_TEMPLATE" remarks="使用新版本的业务单模板">
+            Y
+        </ConfigItem>
+    </ConfigKind>
+    <ConfigKind name="CenterInfo">
+        <ConfigItem name="0" remarks="甘肃省">1</ConfigItem>
+        <ConfigItem name="999" remarks="内蒙古自治区">1</ConfigItem>
+        <ConfigItem name="930" remarks="Biratnagar Region">1</ConfigItem>
+        <ConfigItem name="931" remarks="Biratnagar Region">1</ConfigItem>
+        <ConfigItem name="932" remarks="Biratnagar Region">1</ConfigItem>
+        <ConfigItem name="933" remarks="Biratnagar Region">1</ConfigItem>
+        <ConfigItem name="934" remarks="Biratnagar Region">1</ConfigItem>
+        <ConfigItem name="935" remarks="Biratnagar Region">1</ConfigItem>
+        <ConfigItem name="936" remarks="Biratnagar Region">1</ConfigItem>
+        <ConfigItem name="937" remarks="Biratnagar Region">1</ConfigItem>
+        <ConfigItem name="938" remarks="Biratnagar Region">1</ConfigItem>
+        <ConfigItem name="939" remarks="Biratnagar Region">1</ConfigItem>
+        <ConfigItem name="941" remarks="Biratnagar Region">1</ConfigItem>
+        <ConfigItem name="945" remarks="Biratnagar Region">1</ConfigItem>
+        <ConfigItem name="947" remarks="Biratnagar Region">1</ConfigItem>
+    </ConfigKind>
+    <ConfigKind name="RequestType">
+        <ConfigItem name="BACK_REQ" remarks="退单类型">
+            ToBackReq
+        </ConfigItem>
+        <ConfigItem name="WAIT_REQ" remarks="退单类型">
+            ToWaitReq
+        </ConfigItem>
+
+    </ConfigKind>
+    <ConfigKind name="PageAreaRetract">
+        <ConfigItem name="RetractFromLine" remarks="从第几行收起">3</ConfigItem>
+    </ConfigKind>
+    <ConfigKind name="CacheServerList">
+        <ConfigItem name="1" remarks="">rmi://localhost:9999/jmxconnector</ConfigItem>
+    </ConfigKind>
+    <ConfigKind name="QueueServerList">
+        <ConfigItem name="1" remarks="">rmi://localhost:9999/jmxconnector</ConfigItem>
+    </ConfigKind>
+    <ConfigKind name="ClearCtxMgmt">
+        <ConfigItem name="SF" remarks="">com.ai.sfframe.sf.SfCtxManager::clearContext
+        </ConfigItem><!-- ctx管理类 配置如：class::method,方法不允许带参数 -->
+        <ConfigItem name="SFPS" remarks="">com.ai.oss.ps.PsCtxManager::clearCtx
+        </ConfigItem><!-- ctx管理类 配置如：class::method,方法不允许带参数 -->
+    </ConfigKind>
+
+    <ConfigKind name="SfParamSVImpl">
+        <ConfigItem name="SF" remarks="">com.ai.sfframe.sf.basemgmt.cust.plugin.param.SfParamSVImpl</ConfigItem>
+        <ConfigItem name="WF" remarks="">com.ai.sfframe.wf.basemgmt.rule.service.impl.WfParamSVImpl</ConfigItem>
+        <ConfigItem name="RM" remarks="">com.ai.oss.res.base.common.rule.service.impl.ResParamSVImpl</ConfigItem>
+    </ConfigKind>
+
+    <ConfigKind name="OssAxMgmt">
+        <ConfigItem name="TempPath" remarks="临时文件目录">sfframe/common/ax/temp/</ConfigItem>
+        <ConfigItem name="IsDelete" remarks="是否可以删除">Y</ConfigItem>
+    </ConfigKind>
+
+    <ConfigKind name="ResConfigReq">
+        <ConfigItem name="INTERFACE_CODE" remarks="接口编码">
+            ResConfReq
+        </ConfigItem>
+        <ConfigItem name="VERSION" remarks="接口版本">v1.0.0.0</ConfigItem>
+    </ConfigKind>
+    <ConfigKind name="ResConfigCancel">
+        <ConfigItem name="INTERFACE_CODE" remarks="接口编码">
+            ResConfReq
+        </ConfigItem>
+        <ConfigItem name="VERSION" remarks="接口版本">v1.0.0.0</ConfigItem>
+    </ConfigKind>
+    <ConfigKind name="ResConfigComplete">
+        <ConfigItem name="INTERFACE_CODE" remarks="接口编码">
+            ResConfReq
+        </ConfigItem>
+        <ConfigItem name="VERSION" remarks="接口版本">v1.0.0.0</ConfigItem>
+    </ConfigKind>
+    <ConfigKind name="ResUninstallReq">
+        <ConfigItem name="INTERFACE_CODE" remarks="接口编码">
+            ResConfReq
+        </ConfigItem>
+        <ConfigItem name="VERSION" remarks="接口版本">v1.0.0.0</ConfigItem>
+    </ConfigKind>
+    <ConfigKind name="SA2WfConfigReq">
+        <ConfigItem name="INTERFACE_CODE" remarks="接口编码">
+            SA2WfConfigReq
+        </ConfigItem>
+        <ConfigItem name="VERSION" remarks="接口版本">v1.0.0.0</ConfigItem>
+    </ConfigKind>
+    <ConfigKind name="WfConfigReq">
+        <ConfigItem name="INTERFACE_CODE" remarks="接口编码">
+            SF2WfConfigReq
+        </ConfigItem>
+        <ConfigItem name="VERSION" remarks="接口版本">v1.0.0.0</ConfigItem>
+    </ConfigKind>
+    <ConfigKind name="WfConfigOperatorReq">
+        <ConfigItem name="INTERFACE_CODE" remarks="接口编码">
+            WfConfigOperatorReq
+        </ConfigItem>
+        <ConfigItem name="VERSION" remarks="接口版本">v1.0.0.0</ConfigItem>
+    </ConfigKind>
+    <ConfigKind name="SaWfOperatorReq">
+        <ConfigItem name="INTERFACE_CODE" remarks="接口编码">
+            SaWfOperatorReq
+        </ConfigItem>
+        <ConfigItem name="VERSION" remarks="接口版本">v1.0.0.0</ConfigItem>
+    </ConfigKind>
+    <ConfigKind name="OutsideSurvey">
+        <ConfigItem name="INTERFACE_CODE" remarks="接口编码">
+            OutsideSurvey
+        </ConfigItem>
+        <ConfigItem name="VERSION" remarks="接口版本">v1.0.0.0</ConfigItem>
+    </ConfigKind>
+
+    <ConfigKind name="StatisticsParam">
+        <ConfigItem name="SF_T_TaskTempCode" remarks="统计环节">res.config,account.construct,account.construct.uninstall,
+            switch.construct,switch.construct.uninstall,outline.construct,outline.construct.uninstall,
+            res.cancel,res.uninstall,res.complete,complete
+        </ConfigItem>
+    </ConfigKind>
+
+    <EntityGene>
+        <!-- COMMON -->
+        <Rule_RuleMatch
+                bo="com.ai.sfframe.commons.rule.com.test.po.BORuleGeneRelateBean"
+                colmapping="REL_ID=RELATE_ID;ENTITY_ID=RULE_ID"/>
+        <!-- SF -->
+        <TaskTemplate_sfComponent
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfTaskComGeneBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID"/>
+
+        <TaskTemplate_PT
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfTaskPrintGeneBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID"/>
+
+        <TaskTemplate_PageCmpt
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfTaskPageGeneBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID"/>
+
+        <TaskTemplate_sfAuth
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfTaskAuthGeneBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID"/>
+
+        <TaskTemplate_TL
+                bo="com.ai.sfframe.sf.mc.timelimit.com.test.po.BOSfTaskTlGeneBean"
+                colmapping="ENTITY_ID=TASK_TEMPLATE_ID"/>
+
+        <TaskTemplate_Prosv
+                bo="com.ai.sfframe.sf.readiness.prosv.com.test.po.BOSfTaskProsvGeneBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID"/>
+
+        <TaskTemplate_Ressv
+                bo="com.ai.sfframe.sf.readiness.ressv.com.test.po.BOSfTaskRessvGeneBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID"/>
+
+        <TaskPackage_TL
+                bo="com.ai.sfframe.sf.mc.timelimit.com.test.po.BOSfTaskpkgTlGeneBean"
+                colmapping="ENTITY_ID=PACKAGE_ID"/>
+
+        <Prod_ProdSrv
+                bo="com.ai.sfframe.sf.readiness.prod.com.test.po.BOSfPGeneRelBean"
+                colmapping="ENTITY_ID=PROD_ID"/>
+
+        <BusiTemplate_WF
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfBusitempGeneRelBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID"/>
+        <BusiTemplate_TL
+                bo="com.ai.sfframe.sf.mc.timelimit.com.test.po.BOSfBoTlGeneBean"
+                colmapping="ENTITY_ID=BO_TEMPLATE_ID"/>
+        <BusiTemplate_Aduit
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfBusitempAduitGeneBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID"/>
+
+        <!-- SA -->
+        <SaTaskTemplate_saComponent
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskComGeneBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ID=G_REL_ID"/>
+
+        <SaTaskTemplate_PT
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskPrintGeneBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ID=G_REL_ID"/>
+
+        <SaTaskTemplate_PageCmpt
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskPageGeneBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ID=G_REL_ID"/>
+
+        <SaTaskTemplate_saAuth
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskAuthGeneBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ID=G_REL_ID"/>
+
+        <SaTaskTemplate_TL
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskTlGeneBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ID=G_REL_ID"/>
+
+        <SaTaskTemplate_Prosv
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskProsvGeneBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID"/>
+
+        <SaBusiTemplate_WF
+                bo="com.ai.oss.sa.readiness.workflow.com.test.po.bo.BOBusitempGeneRelBean"
+                colmapping="ENTITY_ID=BUSI_TEMP_ID"/>
+        <!-- WF -->
+        <WO_SchedulPlan
+                bo="com.ai.sfframe.wf.bomgmt.template.wo.com.test.po.BOWfWoPlanGeneBean"
+                colmapping="ENTITY_ID=WO_TMP_ID"/>
+        <Oper_wfComponent
+                bo="com.ai.sfframe.wf.basemgmt.oper.com.test.po.bo.BOWfOperComGeneBean"
+                colmapping="ENTITY_ID=OPER_ID"/>
+        <Oper_TL
+                bo="com.ai.sfframe.wf.basemgmt.oper.com.test.po.bo.BOWfOperTlGeneBean"
+                colmapping="ENTITY_ID=OPER_ID"/>
+        <Spsv_WO
+                bo="com.ai.sfframe.wf.slap.readiness.spsrv.com.test.po.BOWfSpsvWotempGeneBean"
+                colmapping="ENTITY_ID=SPSRV_ID"/>
+        <WO_Page
+                bo="com.ai.sfframe.wf.bomgmt.template.wo.com.test.po.BOWfWoPageGeneBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID"/>
+        <WO_TO bo="com.ai.sfframe.wf.bomgmt.template.to.com.test.po.BOWfWoToTempGeneBean"
+               colmapping="ENTITY_ID=WO_TMP_ID"/>
+        <TO_PRINT
+                bo="com.ai.sfframe.wf.bomgmt.template.to.com.test.po.BOWfTotempPrintGeneBean"
+                colmapping="ENTITY_ID=TO_TEMP_ID"/>
+        <TO_Page
+                bo="com.ai.sfframe.wf.bomgmt.template.to.com.test.po.BOWfToPageGeneBean"
+                colmapping="ENTITY_ID=TO_TEMP_ID"/>
+        <WO_TL bo="com.ai.sfframe.wf.bomgmt.template.wo.com.test.po.BOWfWoTlGeneBean"
+               colmapping="ENTITY_ID=TEMPLATE_ID"/>
+
+    </EntityGene>
+    <EntityRelCond>
+        <!-- COMMON -->
+        <Rule_RuleMatch
+                bo="com.ai.sfframe.commons.rule.com.test.po.BOMatchCondBean"
+                colmapping="REL_ID=RULE_MATCH_ID"/>
+        <!-- SF -->
+        <TaskTemplate_sfComponent
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfTaskComCondBean"
+                colmapping=""/>
+
+        <TaskTemplate_PT
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfTaskPrintCondBean"
+                colmapping=""/>
+
+        <TaskTemplate_PageCmpt
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfTaskPageCondBean"
+                colmapping=""/>
+
+        <TaskTemplate_sfAuth
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfTaskAuthCondBean"
+                colmapping=""/>
+        <TaskTemplate_TL
+                bo="com.ai.sfframe.sf.mc.timelimit.com.test.po.BOSfTaskTlCondBean"
+                colmapping=""/>
+
+        <TaskTemplate_Prosv
+                bo="com.ai.sfframe.sf.readiness.prosv.com.test.po.BOSfTaskProsvCondBean"
+                colmapping=""/>
+
+        <TaskTemplate_Ressv
+                bo="com.ai.sfframe.sf.readiness.ressv.com.test.po.BOSfTaskRessvCondBean"
+                colmapping=""/>
+
+        <BusiTemplate_TL
+                bo="com.ai.sfframe.sf.mc.timelimit.com.test.po.BOSfBoTlCondBean"
+                colmapping=""/>
+        <BusiTemplate_WF
+                bo="com.ai.sfframe.sf.readiness.wf.com.test.po.BOSfBusitempWfCondBean"
+                colmapping=""/>
+        <BusiTemplate_Aduit
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfBusitempAduitCondBean"
+                colmapping=""/>
+
+        <TaskPackage_TL
+                bo="com.ai.sfframe.sf.mc.timelimit.com.test.po.BOSfTaskpkgTlCondBean"
+                colmapping=""/>
+
+        <Prod_ProdSrv
+                bo="com.ai.sfframe.sf.readiness.prod.com.test.po.BOSfPPsCondBean"
+                colmapping="REL_ID=P_PS_REL_ID;G_REL_ID=P_GENE_REL_ID"/>
+        <!-- SA -->
+        <SaTaskTemplate_saComponent
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskComCondBean"
+                colmapping=""/>
+
+        <SaTaskTemplate_PT
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskPrintCondBean"
+                colmapping=""/>
+
+        <SaTaskTemplate_PageCmpt
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskPageCondBean"
+                colmapping=""/>
+
+        <SaTaskTemplate_saAuth
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskAuthCondBean"
+                colmapping=""/>
+        <SaTaskTemplate_TL
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskTlCondBean"
+                colmapping=""/>
+        <SaTaskTemplate_Prosv
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskProsvCondBean"
+                colmapping=""/>
+
+        <SaBusiTemplate_WF
+                bo="com.ai.oss.sa.readiness.workflow.com.test.po.bo.BOBusitempWfCondBean"
+                colmapping=""/>
+        <!-- WF -->
+        <WO_SchedulPlan
+                bo="com.ai.sfframe.wf.bomgmt.template.wo.com.test.po.BOWfWoPlanCondBean"
+                colmapping=""/>
+        <Oper_wfComponent
+                bo="com.ai.sfframe.wf.basemgmt.oper.com.test.po.bo.BOWfOperComCondBean"
+                colmapping=""/>
+        <Oper_TL
+                bo="com.ai.sfframe.wf.basemgmt.oper.com.test.po.bo.BOWfOperTlCondBean"
+                colmapping=""/>
+        <Spsv_WO
+                bo="com.ai.sfframe.wf.slap.readiness.spsrv.com.test.po.BOWfSpsvWotempCondBean"
+                colmapping=""/>
+        <WO_Page
+                bo="com.ai.sfframe.wf.bomgmt.template.wo.com.test.po.BOWfWoPageCondBean"
+                colmapping=""/>
+        <WO_TO
+                bo="com.ai.sfframe.wf.bomgmt.template.to.com.test.po.BOWfWoToTempCondBean"
+                colmapping=""/>
+        <TO_PRINT bo="com.ai.sfframe.wf.bomgmt.template.to.com.test.po.BOWfTotempPrintCondBean"
+                  colmapping=""/>
+        <TO_Page bo="com.ai.sfframe.wf.bomgmt.template.to.com.test.po.BOWfToPageCondBean"
+                 colmapping=""/>
+        <WO_TL
+                bo="com.ai.sfframe.wf.bomgmt.template.wo.com.test.po.BOWfWoTlCondBean"
+                colmapping=""/>
+
+    </EntityRelCond>
+    <EntityRel>
+        <!-- COMMON -->
+        <Rule_RuleMatch
+                bo="com.ai.sfframe.commons.rule.com.test.po.BORuleMatchBean"
+                colmapping="REL_ID=RULE_MATCH_ID;ENTITY_ID=RULE_ID;REL_ENTITY_ID=RULE_VALUE"/>
+        <!-- SF -->
+        <TaskTemplate_sfComponent
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfTaskComRelBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ENTITY_ID=COM_ID"/>
+        <TaskTemplate_PT
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfTaskPrintRelBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ENTITY_ID=PRINT_FORM_CODE"/>
+        <TaskTemplate_PageCmpt
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfTaskPageRelBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ENTITY_ID=PAGE_CMPT_PKG_ID"/>
+        <TaskTemplate_sfAuth
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfTaskAuthRelBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ENTITY_ID=COM_ID"/>
+        <TaskTemplate_TL
+                bo="com.ai.sfframe.sf.mc.timelimit.com.test.po.BOSfTaskTlRelBean"
+                colmapping="ENTITY_ID=TASK_TEMPLATE_ID;REL_ENTITY_ID=TL_ID"/>
+        <TaskPackage_TL
+                bo="com.ai.sfframe.sf.mc.timelimit.com.test.po.BOSfTaskpkgTlRelBean"
+                colmapping="ENTITY_ID=PACKAGE_ID;REL_ENTITY_ID=TL_ID"/>
+        <Prod_ProdSrv
+                bo="com.ai.sfframe.sf.readiness.prod.com.test.po.BOSfPPsRelBean"
+                colmapping="ENTITY_ID=PROD_ID;REL_ENTITY_ID=PPS_ID"/>
+        <TaskTemplate_Prosv
+                bo="com.ai.sfframe.sf.readiness.prosv.com.test.po.BOSfTaskProsvRelBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ENTITY_ID=PROSV_ID"/>
+        <TaskTemplate_Ressv
+                bo="com.ai.sfframe.sf.readiness.ressv.com.test.po.BOSfTaskRessvRelBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ENTITY_ID=RESSV_ID"/>
+        <BusiTemplate_WF
+                bo="com.ai.sfframe.sf.readiness.wf.com.test.po.BOSfBusitempWfRelBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ENTITY_ID=WF_TEMPLATE_ID"/>
+        <BusiTemplate_TL
+                bo="com.ai.sfframe.sf.mc.timelimit.com.test.po.BOSfBoTlRelBean"
+                colmapping="ENTITY_ID=BO_TEMPLATE_ID;REL_ENTITY_ID=TL_ID"/>
+        <BusiTemplate_Aduit
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfBusitempAduitRelBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ENTITY_ID=IS_NEED_ADUIT"/>
+        <!-- SA -->
+        <SaTaskTemplate_saComponent
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskComRelBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ENTITY_ID=COM_ID"/>
+        <SaTaskTemplate_PT
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskPrintRelBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ENTITY_ID=PRINT_FORM_CODE"/>
+        <SaTaskTemplate_PageCmpt
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskPageRelBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ENTITY_ID=PAGE_CMPT_PKG_ID"/>
+        <SaTaskTemplate_saAuth
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskAuthRelBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ENTITY_ID=COM_ID"/>
+        <SaTaskTemplate_TL
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskTlRelBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ENTITY_ID=TL_ID"/>
+        <SaTaskTemplate_Prosv
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaTaskProsvRelBean"
+                colmapping="ENTITY_ID=TEMPLATE_ID;REL_ENTITY_ID=PROSV_ID"/>
+
+        <SaBusiTemplate_WF
+                bo="com.ai.oss.sa.readiness.workflow.com.test.po.bo.BOBusitempWfRelBean"
+                colmapping="ENTITY_ID=BUSI_TEMP_ID;REL_ENTITY_ID=WF_TEMPLATE_ID"/>
+        <!-- WF -->
+        <WO_SchedulPlan
+                bo="com.ai.sfframe.wf.bomgmt.template.wo.com.test.po.BOWfWoPlanRelBean"
+                colmapping="ENTITY_ID=WO_TMP_ID;REL_ENTITY_ID=SCHEDUL_PLAN_ID"/>
+        <Oper_wfComponent
+                bo="com.ai.sfframe.wf.basemgmt.oper.com.test.po.bo.BOWfOperComRelBean"
+                colmapping="ENTITY_ID=OPER_ID;REL_ENTITY_ID=COM_ID"/>
+        <Oper_TL
+                bo="com.ai.sfframe.wf.basemgmt.oper.com.test.po.bo.BOWfOperTlRelBean"
+                colmapping="ENTITY_ID=OPER_ID;REL_ENTITY_ID=TL_ID"/>
+        <Spsv_WO
+                bo="com.ai.sfframe.wf.slap.readiness.spsrv.com.test.po.BOWfSpsvWotempRelBean"
+                colmapping="ENTITY_ID=SPSRV_ID;REL_ENTITY_ID=WO_TEMP_ID"/>
+        <WO_Page
+                bo="com.ai.sfframe.wf.bomgmt.template.wo.com.test.po.BOWfWoPageRelBean"
+                colmapping="ENTITY_ID=WO_TEMP_ID;REL_ENTITY_ID=PAGE_ID"/>
+        <WO_TO bo="com.ai.sfframe.wf.bomgmt.template.to.com.test.po.BOWfWoToTempRelBean"
+               colmapping="ENTITY_ID=WO_TEMP_ID;REL_ENTITY_ID=TO_TEMP_ID"/>
+        <TO_PRINT bo="com.ai.sfframe.wf.bomgmt.template.to.com.test.po.BOWfTotempPrintRelBean"
+                  colmapping="ENTITY_ID=TO_TEMP_ID;REL_ENTITY_ID=PRINT_FORM_CODE"/>
+        <TO_Page bo="com.ai.sfframe.wf.bomgmt.template.to.com.test.po.BOWfToPageRelBean"
+                 colmapping="ENTITY_ID=TO_TEMP_ID;REL_ENTITY_ID=PAGE_CMPT_PKG_ID"/>
+        <WO_TL
+                bo="com.ai.sfframe.wf.bomgmt.template.wo.com.test.po.BOWfWoTlRelBean"
+                colmapping="ENTITY_ID=WO_TEMP_ID;REL_ENTITY_ID=TL_ID"/>
+
+    </EntityRel>
+    <RelateEntity>
+        <!-- COMMON -->
+        <PageCmpt
+                bo="com.ai.sfframe.commons.formcfg.com.test.po.BOOssPageCmptPkgBean"
+                ds="com.ai.sfframe.commons.formcfg.ds.DSAllPageCmptPkg"
+                dspara="bFromCache=false" title="页面组件包"/>
+        <Page
+                bo="com.ai.sfframe.commons.formcfg.com.test.po.BOOssPageCmptPkgBean"
+                ds="com.ai.sfframe.commons.formcfg.ds.DSAllPageCmptPkg"
+                dspara="bFromCache=false" title="页面组件"/>
+        <PT bo=""
+            ds="com.ai.sfframe.commons.bfs.ds.DSFormTemplate" dspara=""
+            title="打印模板"/>
+        <TL bo="com.ai.sfframe.commons.timelimit.com.test.po.BOTimeLimitBean"
+            ds="com.ai.sfframe.commons.timelimit.ds.DsAllTimelimit"
+            dspara="bFromCache=false" title="时限"/>
+        <RuleMatch
+                bo="com.ai.sfframe.commons.rule.com.test.po.BORuleMatchBean"
+                ds="com.ai.sfframe.commons.rule.ds.DSAllRuleMatch"
+                dspara="bFromCache=false" title="规则匹配"/>
+        <WF bo="" ds="com.ai.sfframe.commons.ds.DSWfTemplates"
+            title="流程模板"/>
+
+        <Aduit bo="" ds="com.ai.sfframe.commons.dict.ds.DSStaticData"
+               dspara="sDictCode=YES_OR_NO;isFromCache=true" title="专业服务"/>
+
+        <BusiTemp bo="com.ai.sfframe.commons.busitemplate.com.test.po.bo.BOBusiTemplateBean"
+                  ds="com.ai.sfframe.commons.busitemplate.ds.DSAllBusiTemp"
+                  dspara="" title="业务单模板"/>
+
+        <WO bo="com.ai.sfframe.commons.busitemplate.com.test.po.BOBusiTemplateBean"
+            ds="com.ai.sfframe.commons.busitemplate.ds.DSBusiTemp" dspara="ownSys=WF;bFromCache=false"
+            title="施工单模板"/>
+
+        <Rule bo="com.ai.sfframe.commons.rule.com.test.po.BORuleBean"
+              ds="com.ai.sfframe.commons.busitemplate.ds.DSAllBusiTemp"
+              dspara="" title="规则"/>
+        <PRINT bo=""
+               ds="com.ai.sfframe.commons.df.ds.DSAllTemp" dspara="bFromCache=false"
+               title="打印模板"/>
+        <!-- SF -->
+        <sfComponent
+                bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfComponentBean"
+                ds="com.ai.sfframe.sf.bomgmt.template.ds.DSAllComponent"
+                dspara="bFromCache=false" title="组件"/>
+
+        <sfAuth bo="com.ai.sfframe.sf.bomgmt.template.com.test.po.BOSfAuthBean"
+                ds="com.ai.sfframe.sf.bomgmt.template.ds.DSAllTaskAuth"
+                dspara="bFromCache=false" title="授权组件"/>
+
+        <ProdSrv bo=""
+                 ds="com.ai.sfframe.sf.readiness.prod.ds.DSAllSfProdSrv"
+                 dspara="bFromCache=false" title="产品服务"/>
+
+        <Prosv bo="" ds="com.ai.sfframe.commons.dict.ds.DSStaticData"
+               dspara="sDictCode=PROF_SRV;isFromCache=true" title="专业服务"/>
+
+        <Ressv bo="" ds="com.ai.sfframe.commons.dict.ds.DSStaticData"
+               dspara="sDictCode=RES_SRV;isFromCache=true" title="资源服务"/>
+
+        <!-- SA -->
+        <saComponent
+                bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaComponentBean"
+                ds="com.ai.oss.sa.readiness.tasktemplate.ds.DSAllComponent"
+                dspara="bFromCache=false" title="组件"/>
+
+        <saAuth bo="com.ai.oss.sa.readiness.tasktemplate.com.test.po.bo.BOSaAuthBean"
+                ds="com.ai.oss.sa.readiness.tasktemplate.ds.DSAllTaskAuth"
+                dspara="bFromCache=false" title="授权组件"/>
+        <!-- WF -->
+        <SchedulPlan
+                bo="com.ai.sfframe.wf.slap.readiness.slsm.com.test.po.BOWfSchedulPlanBean"
+                ds="com.ai.sfframe.wf.slap.readiness.slsm.ds.DSSchedulPlan"
+                dspara="nCache=false" title="调度方案匹配"/>
+        <wfComponent bo="com.ai.sfframe.wf.basemgmt.component.com.test.po.BOWfComponentBean"
+                     ds="com.ai.sfframe.wf.basemgmt.component.ds.DSWfComponent" dspara="bFromCache=false"
+                     title="组件"/>
+        <TO bo="com.ai.sfframe.wf.bomgmt.template.to.com.test.po.BOWfToTemplateBean"
+            ds="com.ai.sfframe.wf.bomgmt.template.to.ds.DSWfToTemplate"
+            dspara="" title="任务单模板"/>
+    </RelateEntity>
+</SfframeConfig>

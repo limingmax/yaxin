@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GB2312"?>
+<ucmframe name="服务框架">
+   <configitem>
+     <item name = "DEBUG"              desc = "即开即通DEBUG">true</item>
+     <item name = "FILESYSTEM"         desc = "系统映射文件模式(DBMS数据库,FILESYSTEM文件系统)">true</item>
+     <item name = "REGION_ID"          desc = "即开即通中心类型[REGION_ID]">RegionId</item>
+    <!--  <item name = "KERNEL"        desc = "即开即通模板映射转换类">com.ai.ucmframe.service.UnifyUcm2KernImpl</item>  -->
+     <item name = "CONTRO" desc = "即开即通控制类">
+        <item name = "WORKFLOW" desc = "即开即通回滚控制类">
+           <item name = "ROLLBACK"       desc = "即开即通是否支持回滚流程">true</item>
+           <item name = "RBWFQFOM"       desc = "即开即通是否回滚到调度作业规则">false</item>
+           <item name = "ESWFHUMA"       desc = "即开即通流程容错机制是否落地规则">false</item>
+        </item>
+        <item name = "RSGMSYSTEM"   desc = "即开即通采用号段局向(TRUE资源号段局向)规则">false</item>
+        <item name = "HUMAN"        desc = "即开即通是否网元异常落地捕获规则">true</item>
+        <item name = "REDO_TIMES"   desc = "即开即通默认重做次数规则">5</item>
+     </item>
+   </configitem> 
+    <module file="com/ai/ucmframe/module/ucmframe-core-frame.module" name="即开即通核心服务模块" use="true"/>
+    <module file="com/ai/oss/nm/open/ucmframe-sf-frame.module" name="PBOSS开通核心服务模块" use="true"/>  
+    <module file="com/ai/oss/nm/open/frame/ucmframe-table-frame.module" name="即开即通核心服务模块" use="true"/> 
+ </ucmframe>

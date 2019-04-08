@@ -1,0 +1,1445 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<tasks>
+	<group title="系统任务" type="system" isvisible="true">
+		<task type="start" title="开始"
+			templateclass="com.ai.comframe.vm.template.impl.TaskStartTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskStartImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskStartCell"
+			studioPic="flow/task/start.png"
+			studioPartClass="com.ai.studio.ui.part.node.StartNodeEditPartForSrv" />
+		<task type="finish" title="结束"
+			templateclass="com.ai.comframe.vm.template.impl.TaskFinishTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskFinishImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskFinishCell"
+			studioPic="flow/task/finish.png"
+			studioPartClass="com.ai.studio.ui.part.node.FinishNodeEditPartForSrv" />
+		<task type="auto" title="自动"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskAutoImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskAutoCell"
+			studioPic="flow/task/auto.png"
+			studioPartClass="com.ai.studio.ui.part.node.AutoNodeEditPartForSrv">
+		</task>
+		<task type="user" title="人工任务"
+			templateclass="com.ai.comframe.vm.template.impl.TaskUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserCell"
+			studioPic="flow/task/user.png"
+			studioPartClass="com.ai.studio.ui.part.node.UserNodeEditPartForSrv" />
+		<task type="sign" title="会签"
+			templateclass="com.ai.comframe.vm.template.impl.TaskSignTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskSignImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserCell"
+			studioPic="flow/task/sign.png"
+			studioPartClass="com.ai.studio.ui.part.node.SignNodeEditPartForSrv" />
+		<task type="shell" title="Shell"
+			templateclass="com.ai.comframe.vm.template.impl.TaskShellTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskShellImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskShellCell"
+			studioPic="flow/task/shell.png"
+			studioPartClass="com.ai.studio.ui.part.node.ShellNodeEditPart" />
+		<task type="decision" title="条件判断"
+			templateclass="com.ai.comframe.vm.template.impl.TaskDecisionConditionTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskDecisionConditionImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskDecisionConditionCell"
+			studioPic="flow/task/condition.png"
+			studioPartClass="com.ai.studio.ui.part.node.DecisionNodeEditPart" />
+		<task type="autodecision" title="自动判断"
+			templateclass="com.ai.comframe.vm.template.impl.TaskDecisionAutoTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskDecisionAutoImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskDecisionAutoCell"
+			studioPic="flow/task/judge.png"
+			studioPartClass="com.ai.studio.ui.part.node.AutoDecisionNodeEditPartForSrv" />
+		<task type="enddecision" title="判断结束"
+			templateclass="com.ai.comframe.vm.template.impl.TaskDecisionEndTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskNullImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskDecisionEndCell"
+			studioPic="flow/task/judge-end.png"
+			studioPartClass="com.ai.studio.ui.part.node.EndDecisionNodeEditPart" />
+		<task type="loop" title="循环"
+			templateclass="com.ai.comframe.vm.template.impl.TaskLoopTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskLoopImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskLoopCell"
+			studioPic="flow/task/cycle.png"
+			studioPartClass="com.ai.studio.ui.part.node.LoopNodeEditPart" />
+		<task type="endloop" title="循环结束"
+			templateclass="com.ai.comframe.vm.template.impl.TaskLoopEndTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskNullImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskLoopEndCell"
+			studioPic="flow/task/cycle-end.png"
+			studioPartClass="com.ai.studio.ui.part.node.EndLoopNodeEditPart" />
+		<task type="break" title="break"
+			templateclass="com.ai.comframe.vm.template.impl.TaskBreakTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskNullImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskBreakCell"
+			studioPic="flow/task/break.png"
+			studioPartClass="com.ai.studio.ui.part.node.BreakNodeEditPart" />
+		<task type="continue" title="continue"
+			templateclass="com.ai.comframe.vm.template.impl.TaskContinueTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskNullImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskContinueCell"
+			studioPic="flow/task/continue.png"
+			studioPartClass="com.ai.studio.ui.part.node.ContinueNodeEditPart" />
+		<task type="childworkflow" title="子流程"
+			templateclass="com.ai.comframe.vm.template.impl.TaskWorkflowTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskWorkflowImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskWorkflowCell"
+			studioPic="flow/task/children-workflow.png"
+			studioPartClass="com.ai.studio.ui.part.node.WorkFlowNodeEditPartForSrv" />
+		<!--task type="event" title="业务事件"
+			templateclass="com.ai.comframe.vm.template.impl.TaskEventTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskEventImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskEventCell"
+			studioPic="flow/task/event.png" studioPartClass="com.ai.studio.ui.part.node.BizEventNodeEditPart" /-->
+	</group>
+	<group title="工作流任务" type="workflow" isvisible="true">
+		<task type="timer" title="定时器"
+			templateclass="com.ai.comframe.vm.template.impl.TaskTimerTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskTimerImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskTimerCell"
+			studioPic="flow/task/timer.png"
+			studioPartClass="com.ai.studio.ui.part.node.TimerNodeEditPart" />
+		<task type="fork" title="Fork"
+			templateclass="com.ai.comframe.vm.template.impl.TaskForkTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskNullImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskAndOrCell"
+			studioPic="flow/task/fork.png"
+			studioPartClass="com.ai.studio.ui.part.node.ForkNodeEditPart" />
+		<task type="and" title="AND"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAndTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskAndImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskAndOrCell"
+			studioPic="flow/task/and.png"
+			studioPartClass="com.ai.studio.ui.part.node.AndNodeEditPart" />
+		<task type="or" title="OR"
+			templateclass="com.ai.comframe.vm.template.impl.TaskOrTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskOrImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskAndOrCell"
+			studioPic="flow/task/or.png"
+			studioPartClass="com.ai.studio.ui.part.node.OrNodeEditPart" />
+		<task type="mail" title="发送邮件"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskAutoImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskAutoUserCell"
+			studioPic="flow/task/email.png"
+			studioPartClass="com.ai.studio.ui.part.node.SendMailNodeEditPart">
+			<autodeal>
+				<runtype>pojo</runtype>
+				<servicename />
+				<runclassname>
+					com.ai.comframe.vm.task.SendMail
+				</runclassname>
+				<runfunctionname>send</runfunctionname>
+				<vars name="addr" datatype="String" inouttype="in"
+					description="邮件地址,逗号分隔" />
+				<vars name="ccAddr" datatype="String" inouttype="in"
+					description="抄送地址,逗号分隔" />
+				<vars name="subject" datatype="String" inouttype="in"
+					description="主题" />
+				<vars name="body" datatype="String" inouttype="in"
+					description="正文" />
+				<vars name="files" datatype="String" inouttype="in"
+					description="附件" />
+				<vars name="return" datatype="boolean"
+					inouttype="return" />
+			</autodeal>
+		</task>
+		<task type="isOverTime" title="是否超时"
+			templateclass="com.ai.comframe.vm.template.impl.TaskDecisionAutoUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskDecisionAutoImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskDecisionAutoUserCell"
+			studioPic="flow/task/overtime.png"
+			studioPartClass="com.ai.studio.ui.part.node.OverTimeNodeEditPart">
+			<autodeal>
+				<runtype>pojo</runtype>
+				<servicename />
+				<runclassname>
+					com.ai.comframe.vm.task.SysTask
+				</runclassname>
+				<runfunctionname>isOverTime</runfunctionname>
+				<vars name="inDate" datatype="java.sql.Date"
+					inouttype="in" />
+				<vars name="return" datatype="boolean"
+					inouttype="return" />
+			</autodeal>
+		</task>
+	</group>
+	<group title="Sfframe任务" type="Sfframe" isvisible="true">
+		<task type="port.config" title="配端口"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="line.config" title="配线"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="switch.construct" title="程控施工"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="switch.construct.uninstall" title="程控施工(拆)"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="account.construct" title="帐号开通"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="account.construct.uninstall" title="帐号开通(拆)"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="outline.construct" title="外线施工"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="ftth.outline.construct" title="FTTH外线施工"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="outline.construct.uninstall" title="外线施工(拆)"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="res.complete" title="资源报竣"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="res.uninstall" title="资源拆"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="res.cancel" title="资源撤"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="complete" title="竣工归档"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="outline.check" title="外线审核"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="eqpt.construct" title="设备施工"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="fault.dispatch" title="故障分派"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="wg.detect" title="网管排查"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="outline.detect" title="外线排查"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="return.visit" title="客户回访"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="sf.finish" title="结束"
+			templateclass="com.ai.comframe.vm.template.impl.TaskFinishUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskFinishImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskFinishCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/finish.gif"
+			studioPartClass="com.ai.studio.ui.part.node.FinishUserNodeEditPart">
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>finishOrder</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="void" contextvarName=""
+					inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="if.homeline" title="户线工程？"
+			templateclass="com.ai.comframe.vm.template.impl.TaskDecisionAutoUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskDecisionAutoImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskDecisionAutoUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.AutoDecisionUserNodeEditPart">
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>decision</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.String"
+					inouttype="return" description="" />
+			</autodeal>
+		</task>
+	</group>
+	<group title="甘肃PBOSS" type="甘肃PBOSS" isvisible="true">
+		<task type="ftth.switch.construct" title="FTTH程控施工"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="ftth.switch.construct.uninstall" title="FTTH程控施工（拆）"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="fault.preprocess" title="故障预处理"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="account.resume" title="账号激活"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="eoc.config" title="配EOC"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="inline.construct" title="内线施工"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="inline.construct.uninstall" title="内线施工(拆)"
+			templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell"
+			studioPic="com/ai/appframe2/vm/studio/imag/user.gif"
+			studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+			<user taskusertype="staff" organizeid="" organizename=""
+				taskuserid=":userid" taskusername="" isneedprint="true"
+				isautoprint="false" />
+			<autodeal>
+				<runtype>service</runtype>
+				<servicename>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</servicename>
+				<runclassname>
+					com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV
+				</runclassname>
+				<runfunctionname>assginTask</runfunctionname>
+				<vars name="P_0" datatype="java.lang.String"
+					contextvarName="orderId" inouttype="in" description="" />
+				<vars name="P_1" datatype="java.lang.String"
+					contextvarName="$TASK_ID" inouttype="in" description="" />
+				<vars name="P_2" datatype="java.lang.String"
+					contextvarName="$WORKFLOW_ID" inouttype="in" description="" />
+				<vars name="P_3" datatype="java.lang.String"
+					contextvarName="$TASK_TAG" inouttype="in" description="" />
+				<vars name="P_4" datatype="java.lang.String"
+					contextvarName="region_id" inouttype="in" description="" />
+				<vars name="return" datatype="java.lang.Boolean"
+					contextvarName="$IS_WAIT_USER" inouttype="return" description="" />
+			</autodeal>
+		</task>
+		<task type="eoc.judgment" title="EOC判断" templateclass="com.ai.comframe.vm.template.impl.TaskDecisionAutoUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskDecisionAutoImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskDecisionAutoUserCell" studioPic="flow/task/user.png" studioPartClass="com.ai.studio.ui.part.node.AutoDecisionUserNodeEditPart">
+	     <autodeal>
+	       <runtype>service</runtype>
+	       <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+	       <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+	       <runfunctionname>decision</runfunctionname>
+	       <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+	       <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+	       <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+	       <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+	       <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+	       <vars name="return" datatype="java.lang.String" inouttype="return" description=""/>
+	     </autodeal>
+	   </task>
+	   <task type="construct.uninstall.judgment" title="施工拆判断" templateclass="com.ai.comframe.vm.template.impl.TaskDecisionAutoUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskDecisionAutoImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskDecisionAutoUserCell" studioPic="flow/task/user.png" studioPartClass="com.ai.studio.ui.part.node.AutoDecisionUserNodeEditPart">
+	     <autodeal>
+	       <runtype>service</runtype>
+	       <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+	       <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+	       <runfunctionname>decision</runfunctionname>
+	       <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+	       <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+	       <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+	       <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+	       <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+	       <vars name="return" datatype="java.lang.String" inouttype="return" description=""/>
+	     </autodeal>
+	   </task>
+	</group>
+	
+	<group title="甘肃集客" type="leasedline" isvisible="true">
+   <task type="irms.res.confirm" title="资源确认" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="flow/task/user.png" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+    <task type="irms.install" title="IRMS开通" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="flow/task/user.png" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+     <task type="irms.change" title="IRMS变更" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="flow/task/user.png" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+     <task type="irms.remove" title="IRMS拆除" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="flow/task/user.png" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+    <task type="irms.cancel" title="IRMS撤销" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="flow/task/user.png" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+    <task type="irms.checkin" title="IRMS归档" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="flow/task/user.png" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+    <task type="ashss.register" title="AS/HSS注册" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="flow/task/user.png" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+    <task type="ashss.remove" title="AS/HSS注销" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="flow/task/user.png" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+    <task type="esop.complete" title="竣工归档" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="flow/task/user.png" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+  </group>
+  <group title="内蒙PBOSS任务" type="内蒙PBOSS任务" isvisible="true">
+      <task type="start" title="开始"
+			templateclass="com.ai.comframe.vm.template.impl.TaskStartTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskStartImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskStartCell"		
+			studioPic="flow/task/start.png" studioPartClass="com.ai.studio.ui.part.node.StartNodeEditPartForSrv" />
+			<task type="finish" title="结束"
+			templateclass="com.ai.comframe.vm.template.impl.TaskFinishTemplateImpl"
+			executeclass="com.ai.comframe.vm.engine.impl.TaskFinishImpl"
+			studioDisplayClass="com.ai.comframe.vm.studio.task.TaskFinishCell"
+			studioPic="flow/task/finish.png" studioPartClass="com.ai.studio.ui.part.node.FinishNodeEditPartForSrv" />
+      <task type="res.config" title="资源配置" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="com/ai/appframe2/vm/studio/imag/user.gif" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+    <task type="account.construct" title="帐号开通" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="com/ai/appframe2/vm/studio/imag/user.gif" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+    <task type="account.construct.uninstall" title="帐号开通(拆)" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="com/ai/appframe2/vm/studio/imag/user.gif" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+    <task type="switch.construct" title="程控施工" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="com/ai/appframe2/vm/studio/imag/user.gif" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+    <task type="switch.construct.uninstall" title="程控施工(拆)" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="com/ai/appframe2/vm/studio/imag/user.gif" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+    <task type="outline.construct" title="客户端施工" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="com/ai/appframe2/vm/studio/imag/user.gif" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+    <task type="outline.construct.uninstall" title="客户端施工(拆)" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="com/ai/appframe2/vm/studio/imag/user.gif" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+    <task type="res.complete" title="资源报竣" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="com/ai/appframe2/vm/studio/imag/user.gif" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+    <task type="res.uninstall" title="资源拆" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="com/ai/appframe2/vm/studio/imag/user.gif" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+    <task type="res.cancel" title="资源撤" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="com/ai/appframe2/vm/studio/imag/user.gif" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+   <task type="complete" title="竣工归档" templateclass="com.ai.comframe.vm.template.impl.TaskAutoUserUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskUserImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskUserUserCell" studioPic="com/ai/appframe2/vm/studio/imag/user.gif" studioPartClass="com.ai.studio.ui.part.node.UserUserNodeEditPart">
+      <user taskusertype="staff" organizeid="" organizename="" taskuserid=":userid" taskusername="" isneedprint="true" isautoprint="false"/>
+      <autodeal>
+        <runtype>service</runtype>
+        <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+        <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+        <runfunctionname>assginTask</runfunctionname>
+        <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+        <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+        <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+        <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+        <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+        <vars name="return" datatype="java.lang.Boolean" contextvarName="$IS_WAIT_USER" inouttype="return" description=""/>
+      </autodeal>
+    </task>
+    
+    <task type="is.account.construct" title="是否已开通" templateclass="com.ai.comframe.vm.template.impl.TaskDecisionAutoUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskDecisionAutoImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskDecisionAutoUserCell" studioPic="flow/task/user.png" studioPartClass="com.ai.studio.ui.part.node.AutoDecisionUserNodeEditPart">
+	     <autodeal>
+	       <runtype>service</runtype>
+	       <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+	       <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+	       <runfunctionname>decision</runfunctionname>
+	       <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+	      <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+	      <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+	      <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+	      <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+	      <vars name="return" datatype="java.lang.String" inouttype="return" description=""/>
+	     </autodeal>
+	</task>
+	
+	<task type="is.switch.construct" title="是否程控施工" templateclass="com.ai.comframe.vm.template.impl.TaskDecisionAutoUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskDecisionAutoImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskDecisionAutoUserCell" studioPic="flow/task/user.png" studioPartClass="com.ai.studio.ui.part.node.AutoDecisionUserNodeEditPart">
+	     <autodeal>
+	       <runtype>service</runtype>
+	       <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+	       <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+	       <runfunctionname>decision</runfunctionname>
+	       <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+		   <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+		   <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+		   <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+		   <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+		   <vars name="return" datatype="java.lang.String" inouttype="return" description=""/>
+	     </autodeal>
+	</task>
+	
+	<task type="is.res.config" title="是否已配资源" templateclass="com.ai.comframe.vm.template.impl.TaskDecisionAutoUserTemplateImpl" executeclass="com.ai.comframe.vm.engine.impl.TaskDecisionAutoImpl" studioDisplayClass="com.ai.comframe.vm.studio.task.TaskDecisionAutoUserCell" studioPic="flow/task/user.png" studioPartClass="com.ai.studio.ui.part.node.AutoDecisionUserNodeEditPart">
+	     <autodeal>
+	       <runtype>service</runtype>
+	       <servicename>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</servicename>
+	       <runclassname>com.ai.sfframe.sf.inter.sys.bpm.service.interfaces.IWorkflowTaskSV</runclassname>
+	       <runfunctionname>decision</runfunctionname>
+	       <vars name="P_0" datatype="java.lang.String" contextvarName="orderId" inouttype="in" description=""/>
+		   <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" inouttype="in" description=""/>
+		   <vars name="P_2" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" inouttype="in" description=""/>
+		   <vars name="P_3" datatype="java.lang.String" contextvarName="$TASK_TAG" inouttype="in" description=""/>
+		   <vars name="P_4" datatype="java.lang.String" contextvarName="region_id" inouttype="in" description=""/>
+		   <vars name="return" datatype="java.lang.String" inouttype="return" description=""/>
+	     </autodeal>
+	</task>
+	
+  </group>
+</tasks>
